@@ -1,0 +1,1 @@
+﻿Import-Csv C:\users\pmills-\Desktop\exportfilestest.csv | ForEach { Copy-Item $_.Files '\\mi\dfs\DataExtraction\Samples\SensitiveData\FailedExtractions' -Recurse }

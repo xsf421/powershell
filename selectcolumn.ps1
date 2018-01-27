@@ -1,0 +1,1 @@
+﻿Import-Csv "\\mi\dfs\shared\NOC Team\pmills\emails.csv" | Select Recipient | Out-File "\\mi\dfs\shared\NOC Team\pmills\emails.txt"

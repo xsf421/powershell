@@ -1,0 +1,1 @@
+﻿gci '\\ql2conv01\c$\Users\ap-docconverter\AppData\Local\Temp' -filter '*.pdf' | where { $_.LastWriteTime -lt (get-date).AddDays(-2) } | Remove-Item

@@ -1,0 +1,1 @@
+﻿Get-ChildItem Cert:\LocalMachine\My | Where-Object { $_.IssuerName.Name -cmatch [regex]::Escape("CN=MS-Organization-P2P-Access [2018]") } | Remove-Item -Force

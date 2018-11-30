@@ -1,0 +1,1 @@
+get-adcomputer -filter { OperatingSystem -Like '*Windows*Server*2003*' } -properties OperatingSystem | select Name, OperatingSystem | Format-Table -autosize

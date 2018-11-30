@@ -1,0 +1,1 @@
+﻿Invoke-Command $servers { "rescan","select volume C","extend" | diskpart.exe }

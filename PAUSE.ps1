@@ -1,2 +1,2 @@
-﻿write-host "Press any key to continue..."
+﻿write-host "Complete..."
 [void][System.Console]::ReadKey($true)

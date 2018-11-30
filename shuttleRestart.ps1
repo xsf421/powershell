@@ -1,7 +1,7 @@
 ﻿#Get-Credential
 
 $servernames = Get-Content "\\mi\dfs\shared\NOC Team\pmills\Scripts\qlmw.txt"
-$service = "*Shuttle*"
+$service = "*RocketD*"
 
 ForEach ($server in $servernames ) {
     try { Get-Service -ComputerName $server -name $service | Restart-Service -erroraction Stop

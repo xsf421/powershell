@@ -9,3 +9,5 @@
         Write-Host
     }
 }
+
+Pause

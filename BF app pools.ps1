@@ -1,19 +1,15 @@
-﻿<# BFSRVC app pool cycles /#>
+﻿$server = 'ql1obimportap1b','ql2obimportap1b'
 
-          Write-Host "`n`n`nThis will recycle LOS, LOSWS, and EPICAPI app pools, and the Servicing Sonic Listener Windows service.`n`n`n`n"
+Invoke-Command -scriptblock {
 
-$server = Read-Host "What Server do you need to restart these app pools on?"
-
-write-host "$server"
-
-Invoke-Command -scriptblock{
-
-restart-webapppool 'LOS'
-restart-webapppool 'LOS WS'
-restart-webapppool 'EPICAPI'
+Restart-WebAppPool 'appserver'
+#restart-webapppool 'LOS'
+#restart-webapppool 'LOS WS'
+#restart-webapppool 'EPICAPI'
+#Restart-WebAppPool 'servicehub'
+#Restart-WebAppPool 'servicelistener'
+#Restart-WebAppPool 'servicingwebapi'
 
 } -computername $server
 
-get-service -ComputerName $server -Name ServicingSonicListener | Restart-Service
-
-Pause
+#get-service -ComputerName $server -Name ServicingSonicListener | Restart-Service
